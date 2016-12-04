@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Teamkiller Servers DarkRP Page">
+    <meta name="author" content="MacDeth (STEAM_0:1:15645964)">
 
     <title>Teamkiller Servers</title>
 
@@ -71,7 +71,11 @@
 
     <!-- Header -->
     <header id="top" class="header">
-        <div class="text-vertical-center">
+        <div class="text-vertical-center container-fluid">
+          <div class="row">
+            <div class="col-xs-4">
+            </div>
+            <div class="col-xs-4" style="text-shadow: 0px 0px 3px #FFFFFF">
             <h1>Teamkiller Servers</h1>
             <h3>24/7 Downtown DarkRP. Have fun!</h3>
             <p id="loadfiles"></p>
@@ -83,14 +87,14 @@
               function SetFilesTotal(total){
                 if(total > 0){
                   tehtotal = total;
-                  document.getElementById("loadfiles").innerHTML = "You have "+total+" files to download! Most, if not all of them, are on the workshop.";
+                  document.getElementById("loadfiles").innerHTML = "You have "+total+" files to download! Most, if not all of them, are on <a href=\"http://steamcommunity.com/sharedfiles/filedetails/?id=799569912\">the workshop (799569912)</a>.";
                 }
               }
-              //SetFilesNeeded(10);
+              //SetFilesNeeded(0);
               function SetFilesNeeded(needed){
                 var difference = tehtotal-needed;
                 if(difference >= 0)
-                  document.getElementById("loadnumber").innerHTML = (tehtotal-needed)+" files downloaded.";
+                  document.getElementById("loadnumber").innerHTML = " <div class=\"progress\"><div class=\"progress-bar progress-bar-striped active\" role=\"progressbar\"aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:"+(Math.round((difference/tehtotal)*100))+"%\">"+difference+" files "+(Math.round((difference/tehtotal)*100))+"%</div></div>";
               }
               //SetStatusChanged("Sending client info...");
               function SetStatusChanged(status){
@@ -99,6 +103,10 @@
             </script>
             <br>
             <a href="#rules" class="btn btn-dark btn-lg">Read the Rules</a>
+            </div>
+            <div class="col-xs-4">
+            </div>
+          </div>
         </div>
     </header>
 
